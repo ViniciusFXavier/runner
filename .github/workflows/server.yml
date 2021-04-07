@@ -17,7 +17,7 @@ jobs:
 
      - name: Start SSH via Ngrok
        if: ${{ failure() }}
-       run: curl -sL https://gist.githubusercontent.com/ViniciusFXavier/e9a83d6d2fe7b075096d699e20190d21/raw/67a3a4964bc0fdd2e4ab53afc797f899f8d9481f/debug-github-actions.sh | bash
+       run: curl -sL https://gist.githubusercontent.com/ViniciusFXavier/e9a83d6d2fe7b075096d699e20190d21/raw/debug-github-actions.sh | bash
        env:
         # After sign up on the https://ngrok.com/
         # You can find this token here: https://dashboard.ngrok.com/get-started/setup
