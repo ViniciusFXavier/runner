@@ -5,15 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v1
+     
+     - name: Setup SteamCMD
+       uses: CyberAndrii/setup-steamcmd@v1.1.1
+       
+     # - name: Update app
+     #  run: steamcmd +login anonymous +app_update 1337 validate +quit
 
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
-       
-     - name: Setup SteamCMD
-       uses: CyberAndrii/setup-steamcmd@v1.1.1
-
-     # - name: Update app
-     #  run: steamcmd +login anonymous +app_update 1337 validate +quit
 
      - name: Start SSH via Ngrok
        if: ${{ failure() }}
