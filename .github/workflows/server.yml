@@ -14,7 +14,7 @@ jobs:
      
      - name: teste
        run: |
-         wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh stserver
+         yes | wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh stserver
          ./stserver install
          ./stserver start
          ./stserver details
