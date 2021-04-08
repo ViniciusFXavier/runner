@@ -12,13 +12,6 @@ jobs:
      # - name: Update app
      #  run: steamcmd +login anonymous +app_update 1337 validate +quit
      
-     - name: teste
-       run: |
-         yes | wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh stserver
-         ./stserver install
-         ./stserver start
-         ./stserver details
-     
      # - name: Update app
      #  run: |
      #    wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh << EOF
