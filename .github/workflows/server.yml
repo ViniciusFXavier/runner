@@ -14,11 +14,10 @@ jobs:
      
      - name: Update app
        run: |
-         composer global require beyondcode/expose
-         PATH=~/home/runner/.composer/vendor/bin:$PATH
-         echo PATH=$PATH >> ~/.bashrc
-         expose token ${{ secrets.B_TOKEN }}
-         expose
+         wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh << EOF
+         y
+         yes
+         EOF
 
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
