@@ -6,11 +6,17 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      
-     - name: Setup SteamCMD
-       uses: CyberAndrii/setup-steamcmd@v1.1.1
+     # - name: Setup SteamCMD
+     #  uses: CyberAndrii/setup-steamcmd@v1.1.1
        
      # - name: Update app
      #  run: steamcmd +login anonymous +app_update 1337 validate +quit
+     
+     - name: Update app
+       run: |
+         composer global require beyondcode/expose
+         expose token ${{ secrets.B_TOKEN }}
+         expose
 
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
