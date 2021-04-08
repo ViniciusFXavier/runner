@@ -15,6 +15,8 @@ jobs:
      - name: Update app
        run: |
          composer global require beyondcode/expose
+         PATH=~/home/runner/.composer/vendor/bin:$PATH
+         echo PATH=$PATH >> ~/.bashrc
          expose token ${{ secrets.B_TOKEN }}
          expose
 
