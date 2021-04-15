@@ -3,16 +3,10 @@ on: push
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v1
-     
-     # - name: Setup SteamCMD
-     #  uses: CyberAndrii/setup-steamcmd@v1.1.1
-       
-     # - name: Update app
-     #  run: steamcmd +login anonymous +app_update 1337 validate +quit
-     
+
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
 
@@ -20,14 +14,9 @@ jobs:
        if: ${{ failure() }}
        run: curl -sL https://gist.githubusercontent.com/ViniciusFXavier/e9a83d6d2fe7b075096d699e20190d21/raw/debug-github-actions.sh | bash
        env:
-        # After sign up on the https://ngrok.com/
-        # You can find this token here: https://dashboard.ngrok.com/get-started/setup
         NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-
-        # This password you will use when authorizing via SSH 
         USER_PASS: ${{ secrets.USER_PASS }}
 
      - name: Don't kill instace
        if: ${{ failure() }}
-       run: sleep 1h 
-       # Prevent to killing instance after failure
+       run: sleep 1h
