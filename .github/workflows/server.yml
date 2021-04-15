@@ -4,9 +4,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    container: ubuntu:20.10
-    env:
-      DEBIAN_FRONTEND: noninteractive
     steps:
      - uses: actions/checkout@v1
      
